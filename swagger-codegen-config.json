@@ -1,0 +1,11 @@
+{
+  "licenseName": "GPL-v2.0",
+  "licenseUrl": "https://choosealicense.com/licenses/gpl-2.0/",
+  "artifactUrl": "https://github.com/TheSnoozer/josm-maproulette",
+  "artifactDescription": "Generated API classes for the Maproulette API under https://maproulette.org/docs/swagger-ui/index.html#/. Generated via https://github.com/swagger-api/swagger-codegen",
+  "scmConnection": "scm:git:git@github.com:TheSnoozer/josm-maproulette.git",
+  "scmDeveloperConnection": "scm:git:git@github.com:TheSnoozer/josm-maproulette.git",
+  "scmUrl": "https://github.com/TheSnoozer/josm-maproulette",
+  "java8": "true",
+  "useGzipFeature": "true"
+}
