@@ -1,0 +1,48 @@
+plugins {
+    id 'org.openstreetmap.josm' version '0.8.2'
+    id 'java'
+    id 'idea'
+}
+
+repositories {
+    mavenCentral()
+}
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+
+dependencies {
+
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+josm {
+    josmCompileVersion = "latest"
+    pluginName = "josm-maproulette"
+    manifest {
+        minJosmVersion = 18427
+        minJavaVersion = 11
+        description = "The JOSM Maproulette Plugin attempts to make (some) functionallity of maproulette.org available in the JOSM editor"
+        mainClass = "io.github.thesnoozer.josm_maproulette.JosmMaproulettePlugin"
+        website = new URL("https://github.com/TheSnoozer/josm-maproulette/")
+        includeLinksToGithubReleases = true
+    }
+    github {
+        releasesConfig = file("releases.yml")
+        repositoryOwner = "TheSnoozer"
+        repositoryName = "josm-maproulette"
+    }
+}

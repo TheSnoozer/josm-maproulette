@@ -55,6 +55,16 @@ sed -i "s#<url>http://www.apache.org/licenses/</url>#<url>https://choosealicense
 - Issues and merge requests are managed in GitHub
 - Translation? Not needed yet
 
+# Versioning
+This project follows [Semantic Versioning 2.0.0](https://semver.org).
+
+Given a version number `MAJOR.MINOR.PATCH` the following will be incremented:
+- `MAJOR` version when there are incompatible API changes
+- `MINOR` version when there is functionality added in a backwards compatible manner
+- `PATCH` version when there are backwards compatible bug fixes
+
+Additional labels for pre-release and build metadata might be used as extension to the `MAJOR.MINOR.PATCH` format.
+
 # Disclaimer
 The project author is not affiliated with [maproulette][maproulette] nor [JOSM][josm].
 
