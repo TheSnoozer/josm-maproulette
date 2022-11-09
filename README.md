@@ -47,7 +47,14 @@ java -jar swagger-codegen-cli-3.0.35.jar generate \
    -o maproulette-api
 
 # Workaround for https://github.com/swagger-api/swagger-codegen/issues/11951
-sed -i "s#<url>http://www.apache.org/licenses/</url>#<url>https://choosealicense.com/licenses/gpl-2.0/</url>#" pom.xml
+sed -i "s#<url>http://www.apache.org/licenses/</url>#<url>https://choosealicense.com/licenses/gpl-2.0/</url>#" maproulette-api/pom.xml
+
+# Workaround for https://github.com/swagger-api/swagger-codegen/issues/11952
+sed -i "s#apply plugin: 'maven'#apply plugin: 'maven-publish'#" maproulette-api/build.gradle
+sed -i -e '/install {/,+4d' maproulette-api/build.gradle
+sed -i 's#compile "#implementation: "#' maproulette-api/build.gradle
+sed -i 's#testCompile "#testImplementation: "#' maproulette-api/build.gradle
+
 ```
 
 # Contributing
